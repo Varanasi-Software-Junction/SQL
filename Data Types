@@ -1,0 +1,118 @@
+Oracle supplies the following built-in datatypes:
+
+character datatypes
+CHAR
+NCHAR
+VARCHAR2 and VARCHAR
+NVARCHAR2
+CLOB
+NCLOB
+LONG
+NUMBER datatype
+DATE datatype
+binary datatypes
+BLOB
+BFILE
+RAW
+LONG RAW
+
+
+
+Datatype  	Description  	Column Length and Default  
+CHAR (size)  
+
+Fixed-length character data of length size bytes.  
+
+Fixed for every row in the table (with trailing blanks); maximum size is 2000 bytes per row, default size is 1 byte per row. Consider the character set (one-byte or multibyte) before setting size.  
+
+VARCHAR2 (size)  
+
+Variable-length character data.  
+
+Variable for each row, up to 4000 bytes per row. Consider the character set (one-byte or multibyte) before setting size. A maximum size must be specified.  
+
+NCHAR(size)  
+
+Fixed-length character data of length size characters or bytes, depending on the national character set.  
+
+Fixed for every row in the table (with trailing blanks). Column size is the number of characters for a fixed-width national character set or the number of bytes for a varying-width national character set. Maximum size is determined by the number of bytes required to store one character, with an upper limit of 2000 bytes per row. Default is 1 character or 1 byte, depending on the character set.  
+
+NVARCHAR2 (size)  
+
+Variable-length character data of length size characters or bytes, depending on national character set. A maximum size must be specified.  
+
+Variable for each row. Column size is the number of characters for a fixed-width national character set or the number of bytes for a varying-width national character set. Maximum size is determined by the number of bytes required to store one character, with an upper limit of 4000 bytes per row. Default is 1 character or 1 byte, depending on the character set.  
+
+CLOB  
+
+Single-byte character data.  
+
+Up to 2^32 - 1 bytes, or 4 gigabytes.  
+
+NCLOB  
+
+Single-byte or fixed-length multibyte national character set (NCHAR) data.  
+
+Up to 2^32 - 1 bytes, or 4 gigabytes.  
+
+LONG  
+
+Variable-length character data.  
+
+Variable for each row in the table, up to 2^31 - 1 bytes, or 2 gigabytes, per row. Provided for backward compatibility.  
+
+NUMBER (p, s)  
+
+Variable-length numeric data. Maximum precision p and/or scale s is 38.  
+
+Variable for each row. The maximum space required for a given column is 21 bytes per row.  
+
+DATE  
+
+Fixed-length date and time data, ranging from Jan. 1, 4712 B.C.E. to Dec. 31, 4712 C.E.  
+
+Fixed at 7 bytes for each row in the table. Default format is a string (such as DD-MON-YY) specified by NLS_DATE_FORMAT parameter.  
+
+BLOB  
+
+Unstructured binary data.  
+
+Up to 2^32 - 1 bytes, or 4 gigabytes.  
+
+BFILE  
+
+Binary data stored in an external file.  
+
+Up to 2^32 - 1 bytes, or 4 gigabytes.  
+
+RAW (size)  
+
+Variable-length raw binary data.  
+
+Variable for each row in the table, up to 2000 bytes per row. A maximum size must be specified. Provided for backward compatibility.  
+
+LONG RAW  
+
+Variable-length raw binary data.  
+
+Variable for each row in the table, up to 2^31 - 1 bytes, or 2 gigabytes, per row. Provided for backward compatibility.  
+
+ROWID  
+
+Binary data representing row addresses.  
+
+Fixed at 10 bytes (extended ROWID) or 6 bytes (restricted ROWID) for each row in the table.  
+
+
+
+
+
+
+ANSI SQL Datatype 	Oracle Datatype 
+CHARACTER (n), CHAR (n)  	CHAR (n)  
+NUMERIC (p,s), DECIMAL (p,s), DEC (p,s)  	NUMBER (p,s)  
+INTEGER, INT, SMALLINT  	NUMBER (38)  
+FLOAT (p)  	FLOAT (p)  
+REAL  	FLOAT (63)  
+DOUBLE PRECISION  	FLOAT (126)  
+CHARACTER VARYING(n), CHAR VARYING(n)  	VARCHAR2 (n)  
