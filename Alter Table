@@ -1,0 +1,34 @@
+ALTER TABLE table_name
+ADD column_name datatype;
+The following SQL adds an "Email" column to the "Customers" table:
+
+
+ALTER TABLE Customers
+ADD Email varchar(255);
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+The following SQL deletes the "Email" column from the "Customers" table:
+
+
+ALTER TABLE Customers
+DROP COLUMN Email;
+
+
+
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype;
+
+
+ALTER TABLE Persons
+ADD DateOfBirth date;
+
+
+ALTER TABLE Persons
+ALTER COLUMN DateOfBirth year;
+
+
+ALTER TABLE Persons
+DROP COLUMN DateOfBirth;
+
+
